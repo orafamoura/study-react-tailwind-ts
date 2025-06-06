@@ -5,35 +5,38 @@ import ButtonNormal from '../buttons';
 
 const Formulario = () => {
   return (
-    <form className='w-full max-w-xs'> 
-      <div className='bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4'>
-        <label htmlFor='tarefa'>
-          Adicione alguma coisa nova
-        </label>
-        <input 
-          type='text'
-          name='tarefa'
-          id='tarefa'
-          placeholder='O que você quer estudar?'
-          required
-        />
-      </div>
-      <div className='bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4'>
-        <label>
-          Tempo
-        </label>
-        <input
-          type='time'
-          step='1'
-          name='tempo'
-          id='tempo'
-          min='00:00:00'
-          max='01:30:00'
-          required
-        />
-      </div>
-      <ButtonNormal />
-    </form> 
+    <div className='w-full max-w-xs'>
+        <form className='bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4'> 
+            <div className='mb-4'>
+                <label className='block text-gray-700 text-sm font-bold mb-2' htmlFor='tarefa'>
+                Adicione alguma coisa nova
+                </label>
+                    <input className='shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline'
+                    type='text'
+                    name='tarefa'
+                    id='tarefa'
+                    placeholder='O que você quer estudar?'
+                    required
+                    />
+            </div>
+            <div className='bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4'>
+                <label>
+                Tempo
+                </label>
+                    <input
+                    type='time'
+                    step='1'
+                    name='tempo'
+                    id='tempo'
+                    min='00:00:00'
+                    max='01:30:00'
+                    required
+                    />
+            </div>
+            <ButtonNormal />
+        </form> 
+    </div>
+
   );
 };
 
