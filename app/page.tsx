@@ -6,7 +6,7 @@ import './pages/style.css'
 
 function App() {
   return (
-    <div className="grid grid-rows-(--min-content min-content auto) bg-black">
+    <div className="grid grid-rows-(--min-content min-content auto) bg-black justify-items-center">
         <Formulario />
         <Lista />
     </div>
