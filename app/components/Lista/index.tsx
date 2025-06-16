@@ -11,14 +11,14 @@ function Lista(){
     tarefa: 'Typescript',
     tempo: '03:00:00'
   }
-]
+]   
   return (
-    <aside>
-      <h2> Estudos do dia </h2>
-      <ul>
+    <aside className='inset-shadow-md rounded  pt-2 pb-2 mb-1'>
+      <h2 className='text-white'> Estudos do dia </h2>
+      <ul className=''>
         {tarefas.map((item, index) => ( 
-          <li className='text-4xl font-bold text-blue-600' key={index}>
-          <h3> {item.tarefa} </h3>
+          <li className=' mt-2 bg-gray-300 rounded text-white px-3 py-2' key={index}>
+          <h3 className='pb-1'> {item.tarefa} </h3>
           <span> {item.tempo} </span>
         </li>
         ))}

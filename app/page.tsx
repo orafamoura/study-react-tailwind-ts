@@ -6,9 +6,11 @@ import './pages/style.css'
 
 function App() {
   return (
-    <div className="grid grid-rows-(--min-content min-content auto) bg-black justify-items-center">
-        <Formulario />
-        <Lista />
+    <div className="grid grid-rows-(--min-content min-content auto) bg-gray-500 justify-items-center">
+        <div className='bg-current p-4'>
+            <Formulario />
+            <Lista />       
+        </div>
     </div>
   );
 }
