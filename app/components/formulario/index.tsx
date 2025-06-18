@@ -1,7 +1,7 @@
 'use client';
 
 import React from 'react';
-import ButtonNormal from '../buttons';
+import Button from '../buttons';
 
 const Formulario = () => {
   return (
@@ -35,7 +35,7 @@ const Formulario = () => {
                 />
             </div>
             <div className='flex justify-center'>
-            <ButtonNormal/>
+            <Button>adicionar</Button>
             </div>
         </form> 
     </div>

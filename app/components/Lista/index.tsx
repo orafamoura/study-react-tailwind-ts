@@ -17,11 +17,11 @@ function Lista(){
       <h2 className='text-white'> Estudos do dia </h2>
       <ul className=''>
         {tarefas.map((item, index) => ( 
-          <li className=' mt-2 bg-gray-300 rounded text-white px-3 py-2' key={index}>
+          <li className=' mt-2 bg-gray-300 rounded text-gray-700 font-bold px-3 py-2' key={index}>
           <h3 className='pb-1'> {item.tarefa} </h3>
           <span> {item.tempo} </span>
         </li>
-        ))}
+        ))}  
       </ul>
     </aside>
   )}
