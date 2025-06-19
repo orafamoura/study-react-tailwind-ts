@@ -5,13 +5,13 @@ import Button from '../buttons';
 
 const Formulario = () => {
   return (
-    <div className='w-full max-w-xs'>   
-        <form className='bg-gray-300 inset-shadow-md rounded px-8 pt-6 pb-8 mb-4'> 
-            <div className='mb-4'>
+    <div className='w-full'>   
+        <form className='flex flex-wrap bg-gray-300 inset-shadow-md rounded px-8 pt-6 pb-8 mb-4'> 
+            <div className='m-4'>
                 <label className='block text-gray-700 text-sm font-bold mb-2' htmlFor='tarefa'>
                  Adicione alguma coisa nova
                 </label>
-                <input className='shadow-lg appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline'
+                <input className='shadow-lg appearance-none border rounded w-full mb-3 py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline'
                     type='text'
                     name='tarefa'
                     id='tarefa'
@@ -19,12 +19,12 @@ const Formulario = () => {
                     required
                 />
             </div>
-            <div className='mb-4'>
+            <div className='m-4'>
                 <label className='block text-gray-700 text-sm font-bold mb-2'>
                     Tempo
                 </label>
                 <input
-                    className="shadow-lg appearance-none border border-red-500 rounded w-full py-2 px-3 text-gray-700 mb-3 leading-tight focus:outline-none focus:shadow-outline"
+                    className="shadow-lg appearance-none border rounded w-full mb-3 py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
                     type='time'
                     step='1'
                     name='tempo'

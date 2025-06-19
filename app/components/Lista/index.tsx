@@ -1,4 +1,5 @@
 import React from 'react';
+import Item from './Item/item';
 
 function Lista(){
   const tarefas = [{
@@ -16,11 +17,11 @@ function Lista(){
     <aside className='inset-shadow-md rounded  pt-2 pb-2 mb-1'>
       <h2 className='text-white'> Estudos do dia </h2>
       <ul className=''>
-        {tarefas.map((item, index) => ( 
-          <li className=' mt-2 bg-gray-300 rounded text-gray-700 font-bold px-3 py-2' key={index}>
-          <h3 className='pb-1'> {item.tarefa} </h3>
-          <span> {item.tempo} </span>
-        </li>
+        {tarefas.map((item, index) => (
+            <Item 
+                key={index}
+                {...item}
+            />
         ))}  
       </ul>
     </aside>
