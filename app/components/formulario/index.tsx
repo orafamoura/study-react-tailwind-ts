@@ -1,15 +1,21 @@
 'use client';
 
-import React, { useRef } from 'react';
+import React, { ChangeEvent, useState } from 'react';
 import Button from '../buttons';
 
-const Formulario = () => {
+interface formsProps {
+    tarefa: string,
+    tempo: string
+}
 
-    const inputRef = useRef(null)
+const Formulario = ({tarefa, tempo}: formsProps) => {
 
-    function criarCardLista(){  
-        console.log(inputRef)
-    }
+    const [inputs, setInputs] = useState<formsProps>({tarefa, tempo});
+
+    const handleChange = (e: ChangeEvent<HTMLInputElement>) => {
+        const { name, value } = e.target;
+        setInputs(prev => ({...prev, [name]: value}));
+    };
 
     return (
         <div className='w-full'>   
@@ -19,11 +25,12 @@ const Formulario = () => {
                     Adicione alguma coisa nova
                     </label>
                     <input className='shadow-lg appearance-none border rounded w-full mb-3 py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline'
-                        type='text'
+                        type='string'
+                        value={tarefa}
+                        onChange={handleChange}
                         name='tarefa'
                         id='tarefa'
                         placeholder='O que você quer estudar?'
-                        ref={inputRef}
                         required
                     />
                 </div>
@@ -34,6 +41,8 @@ const Formulario = () => {
                     <input
                         className="shadow-lg appearance-none border rounded w-full mb-3 py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
                         type='time'
+                        value={tempo}
+                        onChange={handleChange}
                         step='1'
                         name='tempo'
                         id='tempo'
@@ -43,7 +52,7 @@ const Formulario = () => {
                     />
                 </div>
                 <div className='flex justify-center'>
-                <Button onClick={criarCardLista}>adiciona</Button>
+                <Button onClick={() => console.log(inputs)}>adiciona</Button>
                 </div>
             </form> 
         </div>
